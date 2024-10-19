@@ -4,47 +4,46 @@ import { randomizeArray } from "@/utils/utils";
 import { counts, countryCodes } from "@/data_files/member-stats.json";
 import TestimonialsSection, { type StatProps } from "../testimonials/TestimonialsSection.astro";
 
-const countryEmojis = countryCodes.map((code) => {
-  return getCountryEmojiByPhoneCode(code.toString());
-});
+// Mantenemos solo el código de Panamá
+const countryEmojis = ["🇵🇦"];
 
-const countryEmojiString = randomizeArray(countryEmojis).join(" ");
+const countryEmojiString = countryEmojis.join(" ");
 
 const stats: StatProps[] = [
   {
     count: counts.members.toString(),
     description:
-      "🤓 Developers connected — fostering innovation across the globe",
+      "🤓 Desarrolladores conectados — impulsando la innovación en Panamá",
   },
   {
-    count: counts.countries.toString(),
+    count: "1",
     description:
-      `🌐 Countries represented: ${countryEmojiString} — creating a diverse and inclusive community`,
+      `🌐 País representado: ${countryEmojiString} — creando una comunidad vibrante en Panamá`,
   },
-  // {
-  //   count: "0",
-  //   description:
-  //     "🖥️ Technology projects completed — driving social impact in communities",
-  // },
-  // {
-  //   count: "0",
-  //   description:
-  //     "👩‍🏫 Professional development sessions hosted — enhancing member skills",
-  // },
+  {
+    count: "10+",
+    description:
+      "🖥️ Proyectos tecnológicos completados — generando impacto en nuestra comunidad",
+  },
+  {
+    count: "20+",
+    description:
+      "👩‍🏫 Sesiones de desarrollo profesional organizadas — mejorando las habilidades de nuestros miembros",
+  },
 ];
 ---
 <TestimonialsSection
-  title="Empower Your Development Journey"
-  subTitle="With Rotary Fellowship of Developers, experience collaboration and growth like never before. See how our members are making a difference."
+  title="Potencia tu Carrera en Desarrollo"
+  subTitle="Con Full Stack Panamá, experimenta colaboración y crecimiento como nunca antes. Descubre cómo nuestros miembros están marcando la diferencia."
   testimonials={[
-    // {
-    //   content:
-    //     "ScrewFast dramatically boosted our project efficiency. Setup was instant, and their rapid response times are phenomenal. Truly a game-changer in hardware and construction support!",
-    //   author: "Samantha Ruiz",
-    //   role: "Chief Operating Officer | ConstructIt Inc.",
-    //   avatarSrc:
-    //     "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
-    // },
+    {
+      content:
+        "Gracias a Full Stack Panamá, pude conectar con otros desarrolladores y encontrar mi primer trabajo en tecnología. La comunidad es increíblemente solidaria y siempre dispuesta a ayudar.",
+      author: "María González",
+      role: "Desarrolladora Full Stack | BaruStudio",
+      avatarSrc:
+        "https://randomuser.me/api/portraits/women/62.jpg",
+    },
   ]}
   statistics={stats}
 />

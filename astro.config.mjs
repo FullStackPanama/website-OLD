@@ -8,16 +8,13 @@ import starlightImageZoom from "starlight-image-zoom";
 // https://astro.build/config
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
-  site: 'https://rotary-dev-fellowship.pages.dev',
+  site: 'https://fullstackpanama.pages.dev',
   image: {
     domains: ["images.unsplash.com"],
   },
   i18n: {
-    defaultLocale: "en",
-    locales: ["en", "fr"],
-    fallback: {
-      fr: "en",
-    },
+    defaultLocale: "es",
+    locales: ["es"],
     routing: {
       prefixDefaultLocale: false,
     },
@@ -27,35 +24,28 @@ export default defineConfig({
     tailwind(),
     sitemap({
       i18n: {
-        defaultLocale: "en", // All urls that don't contain `fr` after `https://screwfast.uk/` will be treated as default locale, i.e. `en`
+        defaultLocale: "es", // All urls that don't contain `fr` after `https://screwfast.uk/` will be treated as default locale, i.e. `en`
         locales: {
-          en: "en", // The `defaultLocale` value must present in `locales` keys
-          fr: "fr",
+          es: "es", // The `defaultLocale` value must present in `locales` keys
         },
       },
     }),
     starlight({
-      title: 'RotaryDEV Fellowship Docs',
+      title: 'FullStack Panama Docs',
       editLink: {
-        baseUrl: 'https://github.com/rotary-dev-fellowship/website/edit/develop/',
+        baseUrl: 'https://github.com/fullstackpanama/website/edit/develop/',
       },
       defaultLocale: "root",
       locales: {
         root: {
-          label: "English",
-          lang: "en",
+          label: "Español",
+          lang: "es",
         },
-        // de: { label: "Deutsch", lang: "de" },
-        // es: { label: "Español", lang: "es" },
-        // fa: { label: "Persian", lang: "fa", dir: "rtl" },
-        // fr: { label: "Français", lang: "fr" },
-        // ja: { label: "日本語", lang: "ja" },
-        // "zh-cn": { label: "简体中文", lang: "zh-CN" },
       },
       // https://starlight.astro.build/guides/sidebar/
       sidebar: [
         {
-          label: "Quick Start Guides",
+          label: "Guías de Inicio Rápido",
           // translations: {
           //   de: "Schnellstartanleitungen",
           //   es: "Guías de Inicio Rápido",
@@ -67,12 +57,12 @@ export default defineConfig({
           autogenerate: { directory: "docs/guides" },
         },
         {
-          label: "Resources",
+          label: "Recursos",
           autogenerate: { directory: "docs/resources" },
         },
       ],
       social: {
-        github: "https://github.com/rotary-dev-fellowship",
+        github: "https://github.com/fullstackpanama",
       },
       disable404Route: true,
       customCss: ["./src/styles/starlight.css"],
@@ -86,14 +76,14 @@ export default defineConfig({
           tag: "meta",
           attrs: {
             property: "og:image",
-            content: "https://rotary-dev-fellowship.pages.dev" + "/docs-social.webp"
+            content: "https://fullstackpanama.pages.dev" + "/docs-social.webp"
           },
         },
         {
           tag: "meta",
           attrs: {
             property: "twitter:image",
-            content: "https://rotary-dev-fellowship.pages.dev" + "/docs-social.webp"
+            content: "https://fullstackpanama.pages.dev" + "/docs-social.webp"
           },
         },
       ],

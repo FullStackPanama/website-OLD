@@ -89,43 +89,44 @@ const insightsCollection = defineCollection({
   }),
 });
 
-// RotaryDEV Fellowship Members
+// Red Profesional de Programadores
 const membersCollection = defineCollection({
   type: "content",
   schema: ({ image }) => z.object ({
-    // Personal Info
-    name: z.string(),
-    image: image(),
-    languages: z.array(z.string()).optional(),
+    // Información Personal
+    nombre: z.string(),
+    imagen: image(),
+    idiomas: z.array(z.string()).optional(),
 
-    // Professional Info
-    jobTitle: z.string(),
-    bio: z.string(),
-    technologies: z.array(z.string()).optional(),
-    openForWork: z.boolean().default(false),
-    openForMentorship: z.boolean().default(false),
+    // Información Profesional
+    biografia: z.string(),
+    tecnologias: z.array(z.string()).optional(),
+    disponibleParaTrabajar: z.boolean().default(false),
+    disponibleParaMentoria: z.boolean().default(false),
 
-    // Contact Info
-    social: z.object({
+    // Información de Contacto
+    redesSociales: z.object({
       github: z.string().optional(),
       linkedIn: z.string().optional(),
       twitter: z.string().optional(),
       website: z.string().optional(),
     }).optional(),
 
-    // Rotary Info
-    rotaryClub: z.object({
-      name: z.string(),
-      type: z.enum(['Rotaract', 'Rotary']),
-      city: z.string(),
-      country: z.enum(['', ...getCountryCodes()]),
-      districtNumber: z.number(),
-    }),
+    // Información de la Empresa
+    empresa: z.object({
+      nombre: z.string(),
+      cargo: z.string(),
+      departamento: z.string(),
+      ciudad: z.string(),
+      pais: z.enum(['', ...getCountryCodes()]),
+      companyUrl: z.string(),
+      companyLogo: z.string(),
+    }).optional(),
 
-    // Membership Info
-    dateJoined: z.date().default(new Date()),
-    role: z.enum(['member', 'admin']).default('member'),
-    active: z.boolean().default(true),
+    // Información de Membresía
+    fechaIngreso: z.date().default(new Date()),
+    rol: z.enum(['miembro', 'administrador']).default('miembro'),
+    activo: z.boolean().default(true),
   }),
 });
 

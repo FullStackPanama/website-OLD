@@ -11,7 +11,7 @@ interface Props {
 }
 
 const member = memberEntry.data;
-const memberCountry = getCountryByCode(member.rotaryClub.country) as ICountryCode;
+const memberCountry = member.empresa?.pais ? getCountryByCode(member.empresa.pais) as ICountryCode : null;
 ---
 
 <!-- The following anchor tag is the main container for the card.
@@ -35,8 +35,8 @@ const memberCountry = getCountryByCode(member.rotaryClub.country) as ICountryCod
   >
     <Image
       class="absolute start-0 top-0 size-full object-cover transition duration-500 group-hover:scale-110"
-      src={member.image}
-      alt={member.name}
+      src={member.imagen}
+      alt={member.nombre}
       draggable={"false"}
       loading={"eager"}
       format={"avif"}
@@ -49,14 +49,15 @@ const memberCountry = getCountryByCode(member.rotaryClub.country) as ICountryCod
       <h3
         class="text-balance text-lg font-bold text-neutral-50 group-hover:text-neutral-50/[.8] sm:text-3xl"
       >
-        {member.name}
-        {memberCountry.emoji}
+        {member.nombre}
+        {memberCountry && memberCountry.emoji}
       </h3>
       <p class="text-pretty text-neutral-50/[.8]">
-        {member.jobTitle}
+        {member.empresa?.cargo || "Profesional independiente"}
       </p>
       <p class="text-pretty text-neutral-50/[.8] text-sm">
-        {member.rotaryClub.name}, {memberCountry.name}, D{member.rotaryClub.districtNumber}
+        {member.empresa?.nombre && `${member.empresa.nombre}, `}
+        {memberCountry && `${memberCountry.name}`}
       </p>
     </div>
   </div>

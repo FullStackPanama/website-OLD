@@ -9,11 +9,11 @@ import TextAreaInput from "@components/ui/forms/input/TextAreaInput.astro";
 import Icon from "@components/ui/icons/Icon.astro";
 
 // Define the variables that will be used in this component
-const title: string = "Contact us";
+const title: string = "Contáctanos";
 const subTitle: string =
-  "Have questions or want to discuss a project? Reach out, and let's craft the perfect solution with our tools and services.";
-const formTitle: string = "Fill in the form below";
-const formSubTitle: string = "We'll get back to you in 1-2 business days.";
+  "¿Tienes preguntas o quieres unirte a nuestra comunidad? Estamos aquí para ayudarte a ser parte del futuro tecnológico de Panamá.";
+const formTitle: string = "Completa el formulario a continuación";
+const formSubTitle: string = "Te responderemos en 1-2 días hábiles.";
 ---
 
 <!-- Contact Us -->
@@ -38,32 +38,31 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
           {formTitle}
         </h2>
         <!-- Form for user input with various input fields.-->
-        <!-- Each field utilizes a different input component for the specific type of input (text, email, phone, and textarea)-->
         <form>
           <div class="grid gap-4">
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <TextInput
                 id="hs-firstname-contacts"
-                label="First Name"
+                label="Nombre"
                 name="hs-firstname-contacts"
               />
               <TextInput
                 id="hs-lastname-contacts"
-                label="Last Name"
-                name="hs-firstname-contacts"
+                label="Apellido"
+                name="hs-lastname-contacts"
               />
             </div>
             <EmailContactInput id="hs-email-contacts" />
             <PhoneInput id="hs-phone-number" />
             <TextAreaInput
               id="hs-about-contacts"
-              label="Details"
+              label="Mensaje"
               name="hs-about-contacts"
             />
           </div>
 
           <div class="mt-4 grid">
-            <AuthBtn title="Send Message" />
+            <AuthBtn title="Enviar Mensaje" />
           </div>
 
           <div class="mt-3 text-center">
@@ -74,42 +73,43 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
         </form>
       </div>
 
-      <!--ContactIconBlocks are used to display different methods of contacting, including visiting office, email, browsing knowledgebase, and FAQ.-->
+      <!--ContactIconBlocks are used to display different methods of contacting-->
       <div class="divide-y divide-neutral-300 dark:divide-neutral-700">
         <ContactIconBlock
-          heading="Knowledgebase"
-          content="Browse through all of our knowledgebase articles."
+          heading="Base de Conocimientos"
+          content="Explora nuestros artículos y tutoriales para desarrolladores."
           isLinkVisible={true}
-          linkTitle="Visit guides & tutorials"
-          linkURL="#"
+          linkTitle="Ver guías y tutoriales"
+          linkURL="/docs"
           isArrowVisible={true}
           ><Icon name="question" />
         </ContactIconBlock>
 
         <ContactIconBlock
-          heading="FAQ"
-          content="Explore our FAQ for quick, clear answers to common queries."
+          heading="Preguntas Frecuentes"
+          content="Encuentra respuestas rápidas a las preguntas más comunes sobre nuestra comunidad."
           isLinkVisible={true}
-          linkTitle="Visit FAQ"
-          linkURL="#"
+          linkTitle="Ver FAQ"
+          linkURL="/faq"
           isArrowVisible={true}
           ><Icon name="chatBubble" />
         </ContactIconBlock>
 
         <ContactIconBlock
-          heading="Visit our office"
-          content="UK ScrewFast"
-          isAddressVisible={true}
-          addressContent="72 Union Terrace, E10 4PE London"
-          ><Icon name="mapPin" />
+          heading="Únete a nuestro grupo de WhatsApp"
+          content="Conéctate directamente con nuestra comunidad"
+          isLinkVisible={true}
+          linkTitle="Unirse al grupo"
+          linkURL="https://chat.whatsapp.com/tu-enlace-de-invitacion"
+          ><Icon name="whatsapp" />
         </ContactIconBlock>
 
         <ContactIconBlock
-          heading="Contact us by email"
-          content="Prefer the written word? Drop us an email at"
+          heading="Contáctanos por email"
+          content="Prefiere escribirnos? Envíanos un correo a"
           isLinkVisible={true}
-          linkTitle="support@screwfast.uk"
-          linkURL="#"
+          linkTitle="info@fullstackpanama.com"
+          linkURL="mailto:info@fullstackpanama.com"
           ><Icon name="envelopeOpen" />
         </ContactIconBlock>
       </div>
