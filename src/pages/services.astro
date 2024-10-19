@@ -36,63 +36,62 @@ interface Article {
 const articles: Article[] = [
   {
     isRightSection: true,
-    title: "Delivering Expert Guidance",
+    title: "Meetups y Conferencias",
     subTitle:
-      "Embarking on a construction project can be overwhelming. With our professional consultation services, we guide you through every stage, ensuring you make informed decisions. Whether you are a DIY enthusiast or a skilled contractor, our experts are on hand to offer tailored advice on product selection, project scope, and compliance with local regulations.",
+      "Organizamos reuniones regulares donde los desarrolladores pueden compartir conocimientos, discutir las últimas tendencias tecnológicas y establecer conexiones valiosas dentro de la comunidad tech de Panamá.",
     single: false,
     imgOne: blueprints,
-    imgOneAlt: "Blueprints and digital tablet with construction plans.",
+    imgOneAlt: "Grupo de desarrolladores en un meetup de Full Stack Panamá",
     imgTwo: personWorking,
-    imgTwoAlt: "Person working in the office",
+    imgTwoAlt: "Desarrolladores haciendo networking en un evento de Full Stack Panamá",
   },
   {
     isRightSection: false,
-    title: "Transforming Designs into Reality",
+    title: "Talleres y Capacitaciones",
     subTitle:
-      "Our skilled craftsmen bring precision and excellence to every construction project. From minor installations to substantial structural work, ScrewFast offers reliable construction services to turn your plans into tangible outcomes. We ensure the highest standards of safety and workmanship, utilizing top-quality tools and materials from our extensive inventory.",
+      "Ofrecemos workshops prácticos y sesiones de capacitación en diversas tecnologías y habilidades de desarrollo, ayudando a nuestros miembros a mantenerse actualizados y mejorar sus competencias profesionales.",
     img: beforeAfter,
-    imgAlt: "Construction site before and after",
+    imgAlt: "Taller práctico de desarrollo web en Full Stack Panamá",
     btnExists: true,
-    btnTitle: "Learn More",
-    btnURL: "#",
+    btnTitle: "Ver Próximos Talleres",
+    btnURL: "/eventos",
   },
   {
     isRightSection: true,
-    title: "Navigating Projects with Professional Oversight",
+    title: "Programa de Mentoría",
     subTitle:
-      "Effective project management is at the heart of any successful build. ScrewFast provides thorough planning and robust management services that keep your project on time and within budget. Let us handle the complexities of workflow coordination, resource allocation, and stakeholder communication while you focus on your vision.",
+      "Conectamos desarrolladores experimentados con aquellos que están comenzando su carrera, fomentando el crecimiento profesional y el intercambio de conocimientos dentro de nuestra comunidad.",
     single: false,
     imgOne: constructionWorkers,
-    imgOneAlt: "Construction workers orchestrating a project",
+    imgOneAlt: "Sesión de mentoría entre desarrolladores de Full Stack Panamá",
     imgTwo: aerialView,
-    imgTwoAlt: "Aerial view of managed construction",
+    imgTwoAlt: "Colaboración en proyectos de desarrollo en Full Stack Panamá",
   },
   {
     isRightSection: false,
-    title: "Ensuring Long-lasting Performance",
+    title: "Proyectos Colaborativos",
     subTitle:
-      "Our commitment to your project doesn't end at completion. ScrewFast offers ongoing maintenance and support services to ensure your construction's longevity and performance. From regular check-ups to emergency assistance, our responsive team is there to provide seamless support.",
+      "Facilitamos la colaboración en proyectos reales, permitiendo a nuestros miembros aplicar sus habilidades, trabajar en equipo y construir un portafolio sólido mientras contribuyen al ecosistema tech de Panamá.",
     img: usingTools,
-    imgAlt:
-      "Man in orange and black vest wearing white helmet holding yellow and black power tool",
+    imgAlt: "Equipo de desarrolladores trabajando en un proyecto colaborativo",
   },
   {
     isRightSection: true,
-    title: "Crafting Bespoke Strategies for Unique Challenges",
+    title: "Bolsa de Empleo y Oportunidades",
     subTitle:
-      "For our larger enterprise clients, ScrewFast offers custom solutions designed to meet specific industry challenges. By understanding your unique needs, we engineer tailored strategies aimed at optimizing your operations, enhancing efficiency, and driving your business forward.",
+      "Conectamos a nuestros miembros con oportunidades laborales en el sector tech de Panamá, y ayudamos a las empresas locales a encontrar talento calificado para sus proyectos de desarrollo.",
     single: false,
     imgOne: progressBuilding,
-    imgOneAlt: "In progress building structure",
+    imgOneAlt: "Feria de empleo tech organizada por Full Stack Panamá",
     imgTwo: underConstruction,
-    imgTwoAlt: "Brown and gray building under construction",
+    imgTwoAlt: "Sesión de preparación para entrevistas técnicas",
     btnExists: true,
-    btnTitle: "Read more",
-    btnURL: "#",
+    btnTitle: "Ver Oportunidades",
+    btnURL: "/empleos",
   },
 ];
 
-const pageTitle: string = `Services | ${SITE.title}`;
+const pageTitle: string = `Servicios | ${SITE.title}`;
 ---
 
 <MainLayout
@@ -100,35 +99,26 @@ const pageTitle: string = `Services | ${SITE.title}`;
   structuredData={{
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://screwfast.uk/services",
-    "url": "https://screwfast.uk/services",
-    "name": "Expert Consultation Services | ScrewFast",
-    "description": "Uniting expertise with your vision, ScrewFast provides exceptional service and comprehensive solutions in the hardware and construction industry, from consultation to project completion.",
+    "@id": "https://fullstackpanama.com/servicios",
+    "url": "https://fullstackpanama.com/servicios",
+    "name": "Servicios y Actividades | Full Stack Panamá",
+    "description": "Descubre los servicios y actividades que Full Stack Panamá ofrece para impulsar el desarrollo profesional y la innovación tecnológica en Panamá.",
     "isPartOf": {
         "@type": "WebSite",
-        "url": "https://screwfast.uk",
-        "name": "ScrewFast",
-        "description": "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs."
+        "url": "https://fullstackpanama.com",
+        "name": "Full Stack Panamá",
+        "description": "Comunidad de desarrolladores comprometidos con el crecimiento tecnológico de Panamá."
     },
-    "inLanguage": "en-US"
+    "inLanguage": "es-PA"
   }}
 >
-  <!--MainSection is the introductory section of the page, it also contains a CTA button-->
   <MainSection
-    title="Uniting Expertise with Your Vision"
-    subTitle="At ScrewFast, we take pride in providing comprehensive solutions and exceptional service in the hardware and construction industry. Our experienced team is dedicated to supporting your project from inception to completion with a range of specialized services."
+    title="Impulsando el Desarrollo Tecnológico en Panamá"
+    subTitle="En Full Stack Panamá, nos dedicamos a fomentar el crecimiento profesional y la innovación en la comunidad de desarrolladores de Panamá. Descubre cómo nuestros servicios y actividades pueden ayudarte a alcanzar tus metas en el mundo tech."
     btnExists={true}
-    btnTitle="Schedule a Consultation"
-    btnURL="#"
+    btnTitle="Únete a Nuestra Comunidad"
+    btnURL="/unete"
   />
-  <!-- RightSection and LeftSection contain details about various services along with pertinent imagery.
-  They alternate for variety in design.
-  The 'btnExists' property is used to toggle the display of a button in these sections.
-  When btnExists={true}, a button is displayed.
-  This can be used to link to more detailed information or related resources.
-  RightSection can also conditionally render one or two images based on the 'single' property.
-  If 'single' is true, it displays one image, otherwise it displays two.
-  -->
   {
     articles.map(article => {
       return article.isRightSection ? (
@@ -157,24 +147,23 @@ const pageTitle: string = `Services | ${SITE.title}`;
       );
     })
   }
-  <!--FeaturesStats section showcases essential stats valuable to users-->
   <FeaturesStats
-    title="By the Numbers"
-    subTitle="Our commitment to quality and reliability is evident in every project we undertake. At ScrewFast, we are dedicated to delivering industry-leading services that ensure your construction projects are built to last."
-    mainStatTitle="96%"
-    mainStatSubTitle="of our clients rate their experience with ScrewFast as exceptional"
+    title="Nuestro Impacto en Números"
+    subTitle="Full Stack Panamá está comprometido con el crecimiento y desarrollo de la comunidad tech en Panamá. Estos números reflejan nuestro impacto y el valor que aportamos a nuestros miembros y al ecosistema tecnológico del país."
+    mainStatTitle="250+"
+    mainStatSubTitle="miembros activos en nuestra comunidad"
     stats={[
       {
-        stat: "99.8%",
-        description: "project completion rate",
+        stat: "50+",
+        description: "eventos y talleres organizados",
       },
       {
-        stat: "5,000+",
-        description: "successful installations",
+        stat: "100+",
+        description: "conexiones laborales facilitadas",
       },
       {
-        stat: "85%",
-        description: "client growth year-over-year",
+        stat: "30+",
+        description: "proyectos colaborativos completados",
       },
     ]}
   />

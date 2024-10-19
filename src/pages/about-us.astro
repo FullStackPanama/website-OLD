@@ -2,21 +2,20 @@
 // Import the necessary components
 import MainLayout from "../layouts/MainLayout.astro";
 import FeaturesGeneral from "../components/sections/features/FeaturesGeneral.astro";
-
 import features from "../data_files/features.json";
 import PrimaryCTA from "@/components/ui/buttons/PrimaryCTA.astro";
 ---
-<!--Utilizing MainLayout for the outer layout of the page, and defining meta for SEO purposes-->
-<MainLayout title="About Us | RotaryDev">
+<!--Utilizando MainLayout para el diseño exterior de la página y definiendo meta para SEO-->
+<MainLayout title="Sobre Nosotros | Full Stack Panamá">
   <FeaturesGeneral
-    id="about"
-    title="About Us"
-    subTitle="A vibrant community where tech innovators and humanitarian doers of Rotary International come together to turn ideas into tangible solutions that enhance our communities and the world."
+    id="sobre-nosotros"
+    title="Sobre Nosotros"
+    subTitle="Full Stack Panamá es una comunidad vibrante de desarrolladores unidos para impulsar la innovación tecnológica en nuestro país. Juntos, estamos construyendo el futuro digital de Panamá."
     features={features}
   />
 
   <PrimaryCTA
-    title="Meet Our Members"
-    url="/members"
+    title="Conoce a Nuestros Miembros"
+    url="/miembros"
   />
 </MainLayout>
