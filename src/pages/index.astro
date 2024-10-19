@@ -9,7 +9,6 @@ import FeaturesNavs from "@/components/sections/features/FeaturesNavs.astro";
 import PricingSection from "@/components/sections/pricing/PricingSection.astro";
 import FAQ from "@/components/sections/FAQ.astro";
 import AnnouncementBanner from "@/components/ui/banners/AnnouncementBanner.astro";
-import heroImage from "@/images/icon-maskable.png";
 import faqs from "@/data_files/faqs.json";
 import features from "@/data_files/features.json";
 import pricing from "@/data_files/pricing.json";
@@ -31,6 +30,7 @@ const avatarSrcs: Array<string> = [
 ---
 
 <MainLayout>
+  <!--
   <AnnouncementBanner
     btnId="dismiss-button"
     btnTitle="Únete Ahora"
@@ -39,6 +39,7 @@ const avatarSrcs: Array<string> = [
   >
     <MemberFlags showText class="text-white dark:text-black"/>
   </AnnouncementBanner>
+  -->
 
   <HeroSection
     title=`Juntos, <span class="text-blue-500 dark:text-blue-400">Codificamos</span> el Futuro de Panamá`
@@ -52,8 +53,8 @@ const avatarSrcs: Array<string> = [
     rating=`<span class="font-bold">4.9</span> / 5`
     starCount={5}
     reviews=`Basado en más de <span class="font-bold">250</span> miembros satisfechos`
-    src={heroImage}
-    alt="Grupo de desarrolladores de Full Stack Panamá colaborando en un proyecto"
+    useBrandLogo={true}
+    alt="Logo de Full Stack Panamá"
   />
 
   <!--
