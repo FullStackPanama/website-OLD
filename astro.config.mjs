@@ -54,11 +54,11 @@ export default defineConfig({
           //   ja: "クイックスタートガイド",
           //   "zh-cn": "快速入门指南",
           // },
-          autogenerate: { directory: "docs/guides" },
+          autogenerate: { directory: "docs/guias" },
         },
         {
           label: "Recursos",
-          autogenerate: { directory: "docs/resources" },
+          autogenerate: { directory: "docs/recursos" },
         },
       ],
       social: {
