@@ -8,7 +8,7 @@ import starlightImageZoom from "starlight-image-zoom";
 // https://astro.build/config
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
-  site: 'https://rotary-dev-fellowship.pages.dev',
+  site: 'https://fullstackpanama.pages.dev',
   image: {
     domains: ["images.unsplash.com"],
   },
@@ -31,9 +31,9 @@ export default defineConfig({
       },
     }),
     starlight({
-      title: 'RotaryDEV Fellowship Docs',
+      title: 'FullStack Panama Docs',
       editLink: {
-        baseUrl: 'https://github.com/rotary-dev-fellowship/website/edit/develop/',
+        baseUrl: 'https://github.com/fullstackpanama/website/edit/develop/',
       },
       defaultLocale: "root",
       locales: {
@@ -76,14 +76,14 @@ export default defineConfig({
           tag: "meta",
           attrs: {
             property: "og:image",
-            content: "https://fullstackpanama.com" + "/docs-social.webp"
+            content: "https://fullstackpanama.pages.dev" + "/docs-social.webp"
           },
         },
         {
           tag: "meta",
           attrs: {
             property: "twitter:image",
-            content: "https://fullstackpanama.com" + "/docs-social.webp"
+            content: "https://fullstackpanama.pages.dev" + "/docs-social.webp"
           },
         },
       ],
