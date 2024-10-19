@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 import SecondaryCTA from "@components/ui/buttons/SecondaryCTA.astro";
 import ReviewComponent from "@components/ui/blocks/ReviewComponent.astro";
+import BrandLogo from "@components/BrandLogo.astro";
 
 // Define props from Astro
 const {
@@ -19,7 +20,8 @@ const {
   rating,
   reviews,
   src,
-  alt
+  alt,
+  useBrandLogo = false
 } = Astro.props;
 
 // Define TypeScript interface for props
@@ -37,6 +39,7 @@ interface Props {
   reviews?: string;
   src?: any;
   alt?: string;
+  useBrandLogo?: boolean;
 }
 ---
 
@@ -79,16 +82,18 @@ interface Props {
   <!-- Hero Image Section -->
   <div class="flex w-full items-center justify-center">
     <div class="top-12 overflow-hidden">
-	    {src && alt &&
-      <Image
-        src={src}
-        alt={alt}
-        class="h-96 w-auto object-contain object-center"
-        draggable={"false"}
-        loading={"eager"}
-        format={"avif"}
-      />
-	    }
+      {useBrandLogo ? (
+        <BrandLogo class="size-[400px]"/>
+      ) : src && alt ? (
+        <Image
+          src={src}
+          alt={alt}
+          class="h-96 w-auto object-contain object-center"
+          draggable={"false"}
+          loading={"eager"}
+          format={"avif"}
+        />
+      ) : null}
     </div>
   </div>
 </section>
