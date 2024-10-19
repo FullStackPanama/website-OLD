@@ -3,19 +3,17 @@
 import FooterSocialLink from "@components/ui/links/FooterSocialLink.astro";
 import EmailFooterInput from "@components/ui/forms/input/EmailFooterInput.astro";
 import enStrings from "@utils/navigation.ts";
-import frStrings from "@utils/fr/navigation.ts";
 import Icon from "@components/ui/icons/Icon.astro";
 import BrandLogo from "@components/BrandLogo.astro";
 import { SITE } from "@data/constants";
 
-// Select the correct translation based on the page's lang prop:
-const strings = Astro.currentLocale === "fr" ? frStrings : enStrings;
+// Usamos solo las strings en español
+const strings = enStrings;
 
 // Define the variables that will be used in this component
-const sectionThreeTitle: string = Astro.currentLocale === "fr" ? "Rester à jour" : "Stay up to date";
-const sectionThreeContent: string = Astro.currentLocale === "fr" ? "Restez informé des derniers outils et des offres exclusives." :
-  "Stay updated with the latest tools and exclusive deals.";
-const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafted by";
+const sectionThreeTitle: string = "Mantente actualizado";
+const sectionThreeContent: string = "Recibe las últimas noticias y actualizaciones de nuestra comunidad.";
+const crafted: string = "Desarrollado por";
 ---
 
 <footer class="w-full bg-neutral-300 dark:bg-neutral-900">
@@ -35,7 +33,7 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafte
               {section.section}
             </h3>
             <ul class="mt-3 grid space-y-3">
-              {section.links.map((link, index) => (
+              {section.links.map((link) => (
                 <li>
                   <a
                     href={link.url}
@@ -43,11 +41,6 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafte
                   >
                     {link.name}
                   </a>
-                  {section.section === "Company" && index === 2 ? (
-                    <span class="ms-1 inline rounded-lg bg-orange-500 px-2 py-1 text-xs font-bold text-neutral-50">
-                      We're hiring!
-                    </span>
-                  ) : null}
                 </li>
               ))}
             </ul>
@@ -55,7 +48,6 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafte
         ))
       }
 
-<!--
       <div class="col-span-2">
         <h3 class="font-bold text-neutral-800 dark:text-neutral-200">
           {sectionThreeTitle}
@@ -68,7 +60,6 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafte
           </p>
         </form>
       </div>
- -->
     </div>
 
     <div
@@ -79,15 +70,9 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafte
           © <span id="current-year"></span> {SITE.title}. {crafted}
           <a
             class="rounded-lg font-medium underline underline-offset-2 outline-none ring-zinc-500 transition duration-300 hover:text-neutral-700 hover:decoration-dashed focus:outline-none focus-visible:ring dark:ring-zinc-200 dark:hover:text-neutral-300"
-            href="https://sobstvennoai.dev"
+            href="https://fullstackpanama.com"
             target="_blank"
-            rel="noopener noreferrer">sobstvennoAI</a
-          > and
-          <a
-            class="font-medium underline underline-offset-2 outline-none ring-zinc-500 transition duration-300 hover:text-neutral-700 hover:decoration-dashed focus:outline-none rounded-lg focus-visible:ring dark:ring-zinc-200 dark:hover:text-neutral-300"
-            href="https://tribal2.dev"
-            target="_blank"
-            rel="noopener noreferrer">Ricardo Tribaldos</a
+            rel="noopener noreferrer">Full Stack Panamá</a
           >.
         </p>
       </div>
@@ -106,12 +91,12 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafte
           ><Icon name="githubFooter" />
         </FooterSocialLink>
 
-        <FooterSocialLink url={strings.socialLinks.google}
-          ><Icon name="googleFooter" />
+        <FooterSocialLink url={strings.socialLinks.whatsapp}
+          ><Icon name="whatsappFooter" />
         </FooterSocialLink>
 
-        <FooterSocialLink url={strings.socialLinks.slack}
-          ><Icon name="slackFooter" />
+        <FooterSocialLink url={strings.socialLinks.instagram}
+          ><Icon name="instagramFooter" />
         </FooterSocialLink>
       </div>
     </div>

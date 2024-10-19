@@ -1,29 +1,29 @@
-  {
-  "subTitle": "Find answers about our mission, projects, and how to get involved.",
+{
+  "subTitle": "Encuentra respuestas sobre nuestra comunidad, proyectos y cómo participar.",
   "faqs": [
     {
-      "question": "What kind of projects does the Rotary Fellowship of Developers work on?",
-      "answer": "The RFD works on a variety of technology-driven projects that support Rotary's humanitarian goals, ranging from developing community service apps to creating website templates for Rotary clubs. Our projects aim to leverage technology to create positive change."
+      "question": "¿Qué tipo de actividades organiza Full Stack Panamá?",
+      "answer": "Organizamos una variedad de actividades, incluyendo meetups, talleres técnicos, hackathons, y sesiones de networking. Nuestro objetivo es proporcionar oportunidades de aprendizaje, colaboración y crecimiento profesional para todos nuestros miembros."
     },
     {
-      "question": "How can I join the Rotary Fellowship of Developers?",
-      "answer": "Joining is a breeze for developers. And if you're new to development, don't worry—we're here to guide you. The process to join involves making a contribution to one of our repos (including this website). We welcome anyone with a passion for technology and community service, ready to contribute to our projects."
+      "question": "¿Cómo puedo unirme a Full Stack Panamá?",
+      "answer": "Unirse es muy sencillo. Puedes empezar uniéndote a nuestro grupo de WhatsApp a través del enlace en nuestra página web. También te invitamos a seguirnos en nuestras redes sociales y participar en nuestros eventos virtuales y presenciales."
     },
     {
-      "question": "Can non-Rotarians join the Fellowship?",
-      "answer": "While our fellowship primarily consists of members of Rotary, we welcome collaborations with non-Rotarians who are committed to using their technical skills for good. Contact us to explore how you can get involved."
+      "question": "¿Es necesario ser un desarrollador experimentado para unirse?",
+      "answer": "¡Para nada! Damos la bienvenida a desarrolladores de todos los niveles, desde principiantes hasta expertos. Nuestra comunidad se basa en el aprendizaje mutuo y el crecimiento conjunto."
     },
     {
-      "question": "What resources are available to members?",
-      "answer": "Members have access to a wealth of resources including coding guides, tutorials, professional development webinars, and a global network of tech professionals. Our resource library is constantly updated to keep you informed and empowered."
+      "question": "¿Qué recursos están disponibles para los miembros?",
+      "answer": "Los miembros tienen acceso a una amplia gama de recursos, incluyendo tutoriales, webinars de desarrollo profesional, oportunidades de networking, y la posibilidad de participar en proyectos colaborativos. Además, nuestra comunidad es una fuente invaluable de conocimiento y apoyo."
     },
     {
-      "question": "How often does the RFD host workshops and meetups?",
-      "answer": "We host regular workshops and meetups both online and in various locations around the world. These events range from technical deep-dives to networking sessions, aimed at fostering collaboration and learning within our community."
+      "question": "¿Con qué frecuencia organizan eventos?",
+      "answer": "Organizamos eventos regularmente, tanto en línea como presenciales. Estos varían desde meetups técnicos hasta sesiones de networking, con el objetivo de fomentar el aprendizaje continuo y la colaboración dentro de nuestra comunidad."
     },
     {
-      "question": "Does the RFD offer mentorship opportunities?",
-      "answer": "Yes, we run a mentorship program that pairs experienced developers with members seeking guidance on their professional journey or on specific projects. It's a great way to learn, share knowledge, and make lasting connections."
+      "question": "¿Ofrecen oportunidades de mentoría?",
+      "answer": "Sí, fomentamos relaciones de mentoría dentro de nuestra comunidad. Conectamos a desarrolladores experimentados con miembros que buscan orientación en su carrera profesional o en proyectos específicos. Es una excelente manera de aprender, compartir conocimientos y crear conexiones duraderas."
     }
   ]
 }

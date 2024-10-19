@@ -44,14 +44,14 @@ export const GET: APIRoute = async () => {
   );
 
   const manifest = {
-    short_name: "ScrewFast",
-    name: "ScrewFast",
+    short_name: "Full Stack PA",
+    name: "Full Stack Panamá",
     icons,
     display: "minimal-ui",
     id: "/",
     start_url: "/",
-    theme_color: "#FFEDD5",
-    background_color: "#262626",
+    theme_color: "#3B82F6",
+    background_color: "#FFFFFF",
   };
 
   return new Response(JSON.stringify(manifest));

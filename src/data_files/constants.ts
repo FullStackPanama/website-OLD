@@ -1,12 +1,12 @@
 import ogImageSrc from "@images/social.png";
 
 export const SITE = {
-  title: "RotaryDEV Fellowship",
-  tagline: "Together, We Code for a Cause",
-  description: "The community where tech innovators of Rotary International come together to turn ideas into tangible solutions that enhance our communities and the world. Start collaborating or join us in our next virtual meet-up.",
-  description_short: "The community where tech innovators of Rotary International come together to turn ideas into tangible solutions that enhance our communities and the world.",
-  url: "https://rotary-dev-fellowship.pages.dev",
-  author: "Ricardo Tribaldos",
+  title: "Full Stack Panamá",
+  tagline: "Juntos, Codificamos el Futuro de Panamá",
+  description: "Somos una comunidad vibrante de desarrolladores panameños unidos para impulsar la innovación tecnológica en nuestro país. Únete a nosotros para aprender, colaborar y crecer profesionalmente.",
+  description_short: "Comunidad de desarrolladores panameños impulsando la innovación tecnológica y el crecimiento profesional en Panamá.",
+  url: "https://fullstackpanama.com", // Asegúrate de actualizar esto con tu URL real
+  author: "Full Stack Panamá",
 };
 
 export const SEO = {
@@ -15,7 +15,7 @@ export const SEO = {
   structuredData: {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    inLanguage: "en-US",
+    inLanguage: "es-PA",
     "@id": SITE.url,
     url: SITE.url,
     name: SITE.title,
@@ -30,7 +30,7 @@ export const SEO = {
 };
 
 export const OG = {
-  locale: "en_US",
+  locale: "es_PA",
   type: "website",
   url: SITE.url,
   title: `${SITE.title}: ${SITE.tagline}`,

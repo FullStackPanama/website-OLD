@@ -9,7 +9,7 @@ import FeaturesNavs from "@/components/sections/features/FeaturesNavs.astro";
 import PricingSection from "@/components/sections/pricing/PricingSection.astro";
 import FAQ from "@/components/sections/FAQ.astro";
 import AnnouncementBanner from "@/components/ui/banners/AnnouncementBanner.astro";
-import heroImage from "@/images/rotary-dev-sticker.png";
+import heroImage from "@/images/icon-maskable.png";
 import faqs from "@/data_files/faqs.json";
 import features from "@/data_files/features.json";
 import pricing from "@/data_files/pricing.json";
@@ -26,37 +26,34 @@ import TestimonialsAndMembersSection from "@/components/sections/landing/Testimo
 import MemberFlags from "@/components/MemberFlags.astro";
 
 const avatarSrcs: Array<string> = [
-  "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
-  "https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
-  "https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80",
-  "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+  // Reemplazar con URLs de imágenes de miembros reales de Full Stack Panamá si es posible
 ];
 ---
 
 <MainLayout>
   <AnnouncementBanner
     btnId="dismiss-button"
-    btnTitle="Join Us Now"
-    url="/docs/guides/getting-started"
-    title="This fellowship is not yet officially recognized by Rotary International. We need to grow our membership to become an official Rotary Fellowship."
+    btnTitle="Únete Ahora"
+    url="/docs/guias/primeros-pasos"
+    title="¡Full Stack Panamá está creciendo! Ya somos más de 250 miembros. Sé parte de nuestra comunidad y ayúdanos a impulsar el desarrollo de software en Panamá."
   >
     <MemberFlags showText class="text-white dark:text-black"/>
   </AnnouncementBanner>
 
   <HeroSection
-    title=`Together, <span class="text-yellow-500 dark:text-yellow-400">We Code</span> for a Cause`
-    subTitle="A vibrant community where tech innovators and humanitarian doers of Rotary International come together to turn ideas into tangible solutions that enhance our communities and the world. Start collaborating or join us in our next virtual meet-up."
-    primaryBtn="Join Us"
-    primaryBtnURL="/docs/guides/getting-started"
-    secondaryBtn="Meet Our Members"
-    secondaryBtnURL="/members"
+    title=`Juntos, <span class="text-blue-500 dark:text-blue-400">Codificamos</span> el Futuro de Panamá`
+    subTitle="Somos una vibrante comunidad de desarrolladores panameños unidos para impulsar la innovación tecnológica en nuestro país. Únete a nosotros para aprender, colaborar y crecer profesionalmente."
+    primaryBtn="Únete a Nosotros"
+    primaryBtnURL="/docs/guias/primeros-pasos"
+    secondaryBtn="Conoce a Nuestros Miembros"
+    secondaryBtnURL="/miembros"
     withReview={false}
     avatars={avatarSrcs}
-    rating=`<span class="font-bold">4.8</span> / 5`
-    starCount={4}
-    reviews=`From Over <span class="font-bold">12.8k</span> Reviews`
+    rating=`<span class="font-bold">4.9</span> / 5`
+    starCount={5}
+    reviews=`Basado en más de <span class="font-bold">250</span> miembros satisfechos`
     src={heroImage}
-    alt="Stack of ScrewFast product boxes containing assorted hardware tools"
+    alt="Grupo de desarrolladores de Full Stack Panamá colaborando en un proyecto"
   />
 
   <!--
@@ -67,45 +64,45 @@ const avatarSrcs: Array<string> = [
   -->
 
   <FeaturesGeneral
-    id="about"
-    title="About Us"
-    subTitle="A vibrant community where tech innovators and humanitarian doers of Rotary International come together to turn ideas into tangible solutions that enhance our communities and the world."
+    id="sobre-nosotros"
+    title="Sobre Nosotros"
+    subTitle="Full Stack Panamá es una comunidad dinámica de desarrolladores comprometidos con el crecimiento del sector tecnológico en Panamá, ofreciendo apoyo, recursos y oportunidades de networking."
     features={features}
   />
 
   <FeaturesNavs
-    title=`Discover how the <span class="text-yellow-500 dark:text-yellow-400">Rotary Fellowship of Developers</span> empowers technology within Rotary`;
+    title=`Descubre cómo <span class="text-blue-500 dark:text-blue-400">Full Stack Panamá</span> impulsa el desarrollo tecnológico`;
     tabs={[
       {
-        heading: "Tech Access for Rotary Clubs",
-        content: "Enable Rotary clubs worldwide to embrace technology with accessible website templates and digital tools, simplifying online presence and operations.",
+        heading: "Red de Soporte",
+        content: "Accede a una comunidad de más de 250 desarrolladores listos para compartir conocimientos, resolver dudas y apoyarte en tu crecimiento profesional.",
         svg: "tools",
         src: imgAccess,
-        alt: "A globe icon representing global access to technology",
+        alt: "Ícono representando una red de conexiones entre desarrolladores",
         first: true,
       },
       {
-        heading: "Collaborative Development",
-        content: "Join forces on tech projects that support Rotary's missions, leveraging our network of developers to bring innovative solutions to life.",
+        heading: "Desarrollo Colaborativo",
+        content: "Participa en proyectos reales, mejora tus habilidades y contribuye al crecimiento tecnológico de Panamá trabajando en equipo.",
         svg: "dashboard",
         src: imgCollab,
-        alt: "Two hands working together, symbolizing collaboration",
+        alt: "Manos trabajando juntas, simbolizando la colaboración",
         second: true,
       },
       {
-        heading: "Networking and Mentorship",
-        content: "Connect with like-minded developers through our platform, sharing knowledge and finding mentorship opportunities to grow professionally.",
+        heading: "Mentoría y Networking",
+        content: "Conecta con desarrolladores experimentados, encuentra mentores y amplía tu red profesional dentro de la industria tecnológica panameña.",
         svg: "house",
         src: imgMentor,
-        alt: "A network diagram symbolizing connections between developers",
+        alt: "Diagrama representando conexiones entre mentores y aprendices",
       },
       {
-        heading: "Educational Workshops",
+        heading: "Eventos y Talleres",
         content:
-          "Promote and participate in technology workshops and meetups, enhancing skills and fostering a culture of continuous learning within the Rotarian community.",
+          "Participa en workshops, meetups y conferencias para mantenerte actualizado con las últimas tendencias y tecnologías en el desarrollo de software.",
         svg: "house",
         src: imgWorkshop,
-        alt: "An icon or image depicting a workshop or educational setting",
+        alt: "Imagen representando un taller o evento educativo",
       },
     ]}
   />
@@ -118,17 +115,17 @@ const avatarSrcs: Array<string> = [
 
   <FAQ
     id="faq"
-    title="Got questions?"
+    title="¿Tienes preguntas?"
     faqs={faqs}
   />
 
   <HeroSectionAlt
-    title="Let's Build Together"
-    subTitle="Are you a Rotarian developer passionate about technology and service? Join us and be part of a network that's making a difference in the world."
+    title="Construyamos Juntos el Futuro Tecnológico de Panamá"
+    subTitle="¿Eres un desarrollador apasionado por la tecnología y el crecimiento de Panamá? Únete a nosotros y sé parte de una red que está marcando la diferencia en nuestro país."
   >
     <GithubBtn
-      url="https://github.com/rotary-dev-fellowship"
-      title="Visit Us on GitHub"
+      url="https://github.com/fullstackpanama"
+      title="Visítanos en GitHub"
     />
   </HeroSectionAlt>
 </MainLayout>
