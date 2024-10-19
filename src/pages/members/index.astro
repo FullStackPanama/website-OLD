@@ -11,12 +11,12 @@ import type { CollectionEntry } from "astro:content";
 const members: CollectionEntry<"members">[] = (
   await getCollection("members")
 )
-  .filter((member) => member.data.active)
-  .sort((a, b) => a.data.dateJoined.getTime() - b.data.dateJoined.getTime());
+  .filter((member) => member.data.activo)
+  .sort((a, b) => a.data.fechaIngreso.getTime() - b.data.fechaIngreso.getTime());
 
 // Define variables for page content
-const title: string = "Members";
-const subTitle: string = "Meet the innovative minds powering the Rotary Fellowship of Developers' global initiatives.";
+const title: string = "Miembros";
+const subTitle: string = "Conoce a las mentes innovadoras que impulsan las iniciativas globales de nuestra red profesional de programadores.";
 
 const pageTitle: string = `${title} | ${SITE.title}`;
 ---
@@ -26,23 +26,23 @@ const pageTitle: string = `${title} | ${SITE.title}`;
   structuredData={{
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://rotary-dev-fellowship.pages.dev/members",
-    "url": "https://rotary-dev-fellowship.pages.dev/members",
+    "@id": "https://fullstackpanama.pages.dev/miembros",
+    "url": "https://fullstackpanama.pages.dev/miembros",
     "name": pageTitle,
     "description": subTitle,
     "isPartOf": {
       "@type": "WebSite",
-      "url": "https://rotary-dev-fellowship.pages.dev",
+      "url": "https://fullstackpanama.pages.dev",
       "name": SITE.title,
       "description": SITE.description_short
     },
-    "inLanguage": "en-US"
+    "inLanguage": "es-ES"
   }}
 >
   <div
     class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
   >
-    <!-- TITLES -->
+    <!-- TÍTULOS -->
     <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
       <div class="flex items-center gap-12">
         <h1
@@ -60,23 +60,23 @@ const pageTitle: string = `${title} | ${SITE.title}`;
       </div>
     </div>
 
-    <!-- MEMBERS -->
+    <!-- MIEMBROS -->
     <section class="grid grid-cols-1 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8 mb-32">
       {
-        members.map((member, index) => {
-          return <section>
+        members.map((member) => (
+          <section>
             <CardMember memberEntry={member} />
-          </section>;
-        })
+          </section>
+        ))
       }
     </section>
 
     <!-- CTA -->
     <HeroSectionAlt
-      title="Eager to Be Part of This Fellowship?"
-      subTitle="Are you a Rotarian developer passionate about technology and service? Join us and be part of a network that's making a difference in the world."
+      title="¿Interesado en formar parte de esta red?"
+      subTitle="¿Eres un programador apasionado por la tecnología y el desarrollo profesional? Únete a nosotros y sé parte de una red que está marcando la diferencia en el mundo tecnológico."
     >
-      <BtnCTA text="Join Us Now!" url="/docs/guides/getting-started" />
+      <BtnCTA text="¡Únete ahora!" url="/docs/guides/getting-started" />
     </HeroSectionAlt>
   </div>
 </MainLayout>

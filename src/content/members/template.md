@@ -17,7 +17,7 @@ redesSociales: {
 
 empresa: {
   nombre: "BaruStudio",
-  cargo: "Desarrollador Full Stack",
+  cargo: "Desarrolladora Full Stack",
   departamento: "Engineering",
   ciudad: "David",
   pais: "PA",

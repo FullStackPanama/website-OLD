@@ -5,7 +5,7 @@ export const SITE = {
   tagline: "Juntos, Codificamos el Futuro de Panamá",
   description: "Somos una comunidad vibrante de desarrolladores panameños unidos para impulsar la innovación tecnológica en nuestro país. Únete a nosotros para aprender, colaborar y crecer profesionalmente.",
   description_short: "Comunidad de desarrolladores panameños impulsando la innovación tecnológica y el crecimiento profesional en Panamá.",
-  url: "https://fullstackpanama.com", // Asegúrate de actualizar esto con tu URL real
+  url: "https://fullstackpanama.pages.dev", // Asegúrate de actualizar esto con tu URL real
   author: "Full Stack Panamá",
 };
 
