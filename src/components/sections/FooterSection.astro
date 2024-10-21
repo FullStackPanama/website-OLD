@@ -12,7 +12,8 @@ const strings = enStrings;
 
 // Define the variables that will be used in this component
 const sectionThreeTitle: string = "Mantente actualizado";
-const sectionThreeContent: string = "Recibe las últimas noticias y actualizaciones de nuestra comunidad.";
+const sectionThreeContent: string =
+  "Recibe las últimas noticias y actualizaciones de nuestra comunidad.";
 const crafted: string = "Desarrollado por";
 ---
 
@@ -23,7 +24,7 @@ const crafted: string = "Desarrollado por";
     <div class="grid grid-cols-2 gap-6 md:grid-cols-4 lg:grid-cols-6">
       <div class="col-span-full lg:col-span-2">
         <!-- Brand Logo -->
-        <BrandLogo class="h-auto max-w-fit w-64 sm:w-80" />
+        <BrandLogo class="h-auto w-64 max-w-fit sm:w-80" />
       </div>
       <!-- An array of links for Product and Company sections -->
       {
@@ -67,12 +68,18 @@ const crafted: string = "Desarrollado por";
     >
       <div class="flex items-center justify-between">
         <p class="text-sm text-neutral-600 dark:text-neutral-400">
-          © <span id="current-year"></span> {SITE.title}. {crafted}
+          © <span id="current-year"></span>
+          {SITE.title}. {crafted}
           <a
             class="rounded-lg font-medium underline underline-offset-2 outline-none ring-zinc-500 transition duration-300 hover:text-neutral-700 hover:decoration-dashed focus:outline-none focus-visible:ring dark:ring-zinc-200 dark:hover:text-neutral-300"
             href="https://github.com/fullstackpanama/website"
             target="_blank"
             rel="noopener noreferrer">Full Stack Panamá</a
+          >. Somos parte de <a
+            class="rounded-lg font-medium underline underline-offset-2 outline-none ring-zinc-500 transition duration-300 hover:text-neutral-700 hover:decoration-dashed focus:outline-none focus-visible:ring dark:ring-zinc-200 dark:hover:text-neutral-300"
+            href="https://www.linkedin.com/company/opactic"
+            target="_blank"
+            rel="noopener noreferrer">OPACTIC</a
           >.
         </p>
       </div>
